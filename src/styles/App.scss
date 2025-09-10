@@ -1,0 +1,341 @@
+// === Переменные ===
+$white: #fff;
+$black: #000;
+$shadow: rgba(0, 0, 0, 0.2);
+$font-raleway: "Raleway", sans-serif;
+$font-judson: "Judson", serif;
+$font-inspiration: "Inspiration", cursive;
+// === Общий "стеклянный" стиль ===
+%glass {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+          inset 0 0 0.5px rgba(255, 255, 255, 0.3),
+          0 20px 50px rgba(0, 0, 0, 0.25);
+}
+%glass2 {
+  background: rgba(0, 0, 0, 0.63);
+  border-radius: 20px;
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  box-shadow:
+          inset 0 0 0.5px rgba(255, 255, 255, 0.3),
+          0 20px 50px rgba(0, 0, 0, 0.25);
+}
+// === Сброс ===
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// === Импорты ===
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+// === App ===
+.App {
+  text-decoration: none;
+  background: linear-gradient(-90.29deg, rgb(184, 0, 32) 20%, rgb(0, 49, 255) 99.8%) no-repeat;
+  padding-top: 50px;
+}
+
+.gallery-modal-constructor{
+  padding: 70px;
+  width: 60%;
+  border-radius: 10px;
+  text-align: left;
+  @extend %glass2;
+  color: #ffffff;
+  z-index: 10000;
+  input {
+    margin-top: 20px;
+    padding: 50px;
+    height: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid #fafafa;
+    @extend %glass;
+  }
+  .input-group{
+    margin-top: 20px;
+  }
+}
+.header-modal-reg{
+  padding: 40px;
+  width: 40%;
+  border-radius: 10px;
+  @extend %glass2;
+  color: #ffffff;
+  z-index: 10000;
+
+
+  input {
+    margin-top: 20px;
+    padding: 30px;
+    height: 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    border: 1px solid #fafafa;
+    @extend %glass;
+  }
+  button{
+    border-radius: 40px;
+    border:none;
+    padding: 25px;
+  }
+  h3{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.header-overlay-hide {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  backdrop-filter: blur(35px) saturate(200%);
+}
+
+// === Modal ===
+.header-modal-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+
+
+// === Galemain ===
+.galemain {
+  @extend %glass;
+  padding: 24px;
+  position: relative;
+  z-index: 50;
+
+}
+
+// === CardItem ===
+.cardItem {
+  border-radius: 5px;
+  background-color: rgba(54, 54, 54, 0.448);
+  height: 40px;
+}
+
+
+
+// === LeftPanel ===
+.leftPanelGallery {
+  height: 500px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.396);
+  border-radius: 13px;
+  font-family: $font-judson;
+  color: $white;
+}
+
+.leftPanelGallery1 {
+
+  padding: 20px;
+  height: 100px;
+  font-family: $font-judson;
+  color: $white;
+  background: rgba(156, 53, 53, 0.06);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+          inset 0 0 0.5px rgba(255, 255, 255, 0.3),
+          0 20px 50px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.leftPanelItem {
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 30px;
+  height: 62px;
+  background: linear-gradient(90deg, rgba(81, 50, 50, 0.66) 20%, rgba(44, 72, 110, 0.66) 100%);
+  border-radius: 10px;
+  transition: 1.2s;
+
+  &:hover {
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.738);
+    background: linear-gradient(360deg, rgba(7, 49, 64, 0.66) 20%, rgba(44, 72, 110, 0.66) 100%);
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+
+// === Заголовки и текст ===
+h1, h2, h3 {
+  letter-spacing: 1px;
+  font-family: $font-raleway;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+p {
+  letter-spacing: 1px;
+  font-family: $font-raleway;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: $font-inspiration;
+}
+
+// === Header ===
+Header {
+  align-items: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 72% 100px 150px;
+  margin-left: 10%;
+  background-color: #161214;
+  border-radius: 18px;
+  max-width: 1100px;
+  min-height: 87px;
+  font-size: calc(7px + 2vmin);
+  color: $white;
+  gap: 20px;
+  box-shadow: 3px 10px $shadow;
+}
+
+// === Кнопки ===
+.getbutton {
+  cursor: pointer;
+  width: 150px;
+  height: 60px;
+  box-shadow: 3px 10px $shadow;
+  background-color: #273270;
+  border-radius: 18px;
+  border: none;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    transition: 0.8s;
+    color: $black;
+    transform: scale(1.03);
+  }
+}
+
+.getbutton2 {
+  @extend .getbutton;
+  background-color: #14268d;
+  box-shadow: 3px 7px $shadow;
+}
+
+.getbutton3 {
+  cursor: pointer;
+  width: 150px;
+  height: 60px;
+  box-shadow: 3px 10px $shadow;
+  background: none;
+  border-radius: 18px;
+  border: 2px solid;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 25, 251, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+
+  &:hover {
+    color: red;
+    border: none;
+    transform: translateY(-5px);
+    box-shadow: 5px 15px rgba(0, 0, 0, 0.3);
+
+    &::before {
+      width: 300px;
+      height: 300px;
+      opacity: 1;
+    }
+
+    span {
+      transform: translateY(-3px);
+    }
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+  }
+}
+
+// === Блоки ===
+.blob, .blobtwo, .blobtree {
+  padding: 40px;
+  height: 373px;
+  border-radius: 13px;
+  color: $white;
+}
+
+.blob {
+  font-family: $font-inspiration;
+  background-color: rgba(0, 0, 0, 24%);
+
+  h1 { font-size: 128px; }
+  h3 { font-size: 40px; }
+}
+
+.blobtwo {
+  font-family: $font-judson;
+  font-weight: 700;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.384);
+}
+
+.blobtree {
+  font-family: $font-judson;
+  font-weight: 700;
+  text-align: left;
+  background: rgba(255, 0, 76, 0.2);
+}
+
+// === Карусель ===
+.crousel {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgba(36, 17, 17, 0.316);
+}
+
+.btnCarousel {
+  padding-top: 10%;
+  margin: 20px;
+  border-radius: 13px;
+  background-color: rgba(46, 76, 87, 0.253);
+  transition: 1s;
+
+  &:hover {
+    color: $black;
+    transform: scale(1.05);
+    background-color: rgba(46, 46, 46, 0.571);
+  }
+}

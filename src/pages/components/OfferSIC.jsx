@@ -31,13 +31,13 @@ export default function Offer() {
                 <div className="col">
                     <div className="row mt-5  text-end">
                         <div className="col">
-                        <img src="/images/imageBig.png" alt=""  className="" width='450px'/>
+                        <img src="/images/imageBig.png" alt=""  className="" width='464'/>
                         </div>
                     </div>
                     <div className="row mt-2 text-end">
                         <div className="col ">
-                        <img src="/images/img5.png" alt=""   width='225px'/>
-                        <img src="/images/img6.png" alt=""   width='225px'/>
+                        <img src="/images/img5.png" alt=""   width='187'/>
+                        <img src="/images/img6.png" alt=""   width='187'/>
                         </div>
                         
                     </div>

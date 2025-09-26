@@ -1,6 +1,6 @@
-import Galleryy from "./components/Galleryitem";
-import ConstructorModal from "./components/ConstructorModal";
-export default function Gallery() {
+import Galleryy from "../../entities/image/ui/Galleryitem";
+import ConstructorModal from "../../features/Constructor/ui/ConstructorModal";
+export default function Index() {
     return (
         <div className="p-5">
             <h2 className="text-center fs-1 text-light mt-5">Галлерея сгенерированных изображений </h2>

@@ -13,17 +13,17 @@ export default function Offer() {
                     </div>
                     <div className="row mt-5 mt-2 text-start">
                         <div className="col">
-                        <img src="/images/img3.png" alt=""  className=" offerrImg" />
+                        <img src="/persona/src/images/img3.png" alt="" className=" offerrImg" />
                         </div>
                     </div>
                     <div className="row mt-2 text-center">
                         <div className="col ">
-                        <img src="/images/img2.png" alt=""  className="offerrImg" />
+                        <img src="/persona/src/images/img2.png" alt="" className="offerrImg" />
                         </div>
                     </div>
                     <div className="row mt-2 text-end">
                         <div className="col ">
-                        <img src="/images/img1.png" alt=""  className="offerrImg" />
+                        <img src="/persona/src/images/img1.png" alt="" className="offerrImg" />
                         </div>
                     </div>
                 </div>
@@ -31,13 +31,13 @@ export default function Offer() {
                 <div className="col">
                     <div className="row mt-5  text-end">
                         <div className="col">
-                        <img src="/images/imageBig.png" alt=""  className="" width='464'/>
+                        <img src="/persona/src/images/imageBig.png" alt="" className="" width='464'/>
                         </div>
                     </div>
                     <div className="row mt-2 text-end">
                         <div className="col ">
-                        <img src="/images/img5.png" alt=""   width='187'/>
-                        <img src="/images/img6.png" alt=""   width='187'/>
+                        <img src="/persona/src/images/img5.png" alt="" width='187'/>
+                        <img src="/persona/src/images/img6.png" alt="" width='187'/>
                         </div>
                         
                     </div>

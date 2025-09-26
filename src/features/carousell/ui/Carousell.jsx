@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 export default function Carousel() { 
     const links = [
-        { link: "/images/img1.png" },
-        { link: "/images/img2.png" },
-        { link: "/images/img3.png" },
-        { link: "/images/img4.png" },
-        { link: "/images/img5.png" },
-        { link: "/images/img6.png" },
+        { link: "../../../shared/images/img1.png" },
+        { link: "../../../shared/images/img2.png" },
+        { link: "../../../shared/images/img3.png" },
+        { link: "../../../shared/images/img4.png" },
+        { link: "../../../shared/images/img5.png" },
+        { link: "../../../shared/images/img6.png" },
     ];
 
     const [index, setIndex] = useState(0);

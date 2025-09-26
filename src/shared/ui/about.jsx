@@ -1,4 +1,4 @@
-import Carousel from './Carousell';
+import Carousel from '../../features/carousell/ui/Carousell';
 
 function Header() {
   return (

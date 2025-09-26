@@ -1,11 +1,11 @@
 import './styles/App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from './pages/components/Header';
+import Header from '../shared/ui/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './pages/components/Footer';
-import Home from './pages/Home';
-import Gallery from './pages/Gallery';
-import NotFound from './pages/NotFound';
+import Footer from '../shared/ui/Footer';
+import Home from '../pages/home';
+import Gallery from '../pages/Gallery';
+import NotFound from '../pages/notFound';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/Gallery" element={<Gallery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

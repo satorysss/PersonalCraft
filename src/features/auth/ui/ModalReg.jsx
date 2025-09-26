@@ -12,7 +12,7 @@ export default function ModalReg() {
 
   return (
       <div>
-      <button className="getbutton" onClick={opendwindow}>git started</button>
+      <button className="getbutton" onClick={opendwindow}>Login</button>
 
       {modal  === 'open' && (
 

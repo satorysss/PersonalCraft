@@ -1,5 +1,5 @@
-import Galleryy from "./components/Galleryitem";
-import ConstructorModal from "./components/ConstructorModal";
+import Galleryy from "../../../entities/image/ui/Galleryitem";
+import ConstructorModal from "../../../features/Constructor/ui/ConstructorModal";
 export default function Gallery() {
     return (
         <div className="p-5">

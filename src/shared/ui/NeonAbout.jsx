@@ -1,6 +1,6 @@
 export default function NeonAbout() {
     return (
-        <div className="bg-dark text-white mt-5">
+        <div className="block text-white mt-5">
             <div className="container">
                 <div className="row p-5">
                     <div className="col">

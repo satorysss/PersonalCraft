@@ -103,12 +103,12 @@ header{
 }
 /* Верхняя дорожка (вправо) */
 .scroll-text:nth-child(1) {
-  animation: scroll-right 25s linear infinite;
+  animation: scroll-right 50s linear infinite;
 }
 
 /* Нижняя дорожка (влево) */
 .scroll-text:nth-child(2) {
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 50s linear infinite;
 }
 
 @keyframes scroll-right {
@@ -202,12 +202,13 @@ header{
 
 // === Galemain ===
 .galemain {
-  @extend %glass;
-  padding: 24px;
+  @extend %glass2;
   position: relative;
   z-index: 50;
-
-
+}
+.col-custom {
+  flex: 0 0 22%;  /* между col-2 (≈16.6%) и col-3 (≈25%) */
+  max-width: 22%;
 }
 
 // === CardItem ===
@@ -220,16 +221,25 @@ header{
 
 // === LeftPanel ===
 .leftPanelGallery {
-  height: 500px;
+  border-radius: 20px;
+  display: flex;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.396);
-  border-radius: 13px;
   font-family: $font-judson;
   color: $white;
 }
+select,.gallery-modal-constructor{
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(35px);
+  text-align: center;
+  background-color: rgba(54, 54, 54, 0.06);
+  color: white;
+}
 
 .leftPanelGallery1 {
-
+  border-radius: 30px;
   padding: 20px;
   height: 100px;
   font-family: $font-judson;

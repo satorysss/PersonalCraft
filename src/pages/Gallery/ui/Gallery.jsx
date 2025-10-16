@@ -6,9 +6,9 @@ export default function Gallery() {
         <div className="container">
             <h2 className="text-center fs-1 text-light mt-5">Галлерея сгенерированных изображений </h2>
             <div className="text-white  mt-5 row ">
-                <Reveal>
+
                     <LeftPanelGallery/>
-                </Reveal>
+
                 <Reveal>
                     <Galleryy/>
                 </Reveal>

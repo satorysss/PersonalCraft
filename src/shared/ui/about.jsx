@@ -1,10 +1,9 @@
-import Carousel from '../../features/carousell/ui/Carousell';
 import ScrollText from "@/shared/ui/ScrollText";
 import {Link} from "react-router-dom";
 
 function Header() {
   return (
-<div className="container d-flex flex-column align-items-center ">
+<div className=" d-flex flex-column align-items-center ">
     <div className="col-12 col-md-6 text-center mt-5">
         <div className="blob p-4 ">
             <h1>PersonalCraft</h1>

@@ -1,7 +1,8 @@
 // === Переменные ===
-$white: #fff;
+$white: #ffffff;
+$orange: #00d9ff;
 $black: #000;
-$shadow: rgba(0, 0, 0, 0.2);
+$shadow: rgba(44, 9, 44, 0.15);
 $font-raleway: "Raleway", sans-serif;
 $font-judson: "Judson", serif;
 $font-inspiration: "Inspiration", cursive;
@@ -9,7 +10,7 @@ $font-inspiration: "Inspiration", cursive;
 %glass {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 25px;
-  backdrop-filter: blur(40px) saturate(250%);
+  backdrop-filter: blur(40px) saturate(150%);
   -webkit-backdrop-filter: blur(40px) saturate(250%);
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow:
@@ -20,7 +21,7 @@ $font-inspiration: "Inspiration", cursive;
   &:hover {
     transform: scale(1.02);
     box-shadow:
-            0 0 25px rgba(255, 0, 70, 0.25),
+            0 0 25px rgba(131, 0, 37, 0.25),
             0 0 40px rgba(0, 70, 255, 0.25);
   }
 }
@@ -88,14 +89,15 @@ header{
 .scroll-text {
   display: flex;
   white-space: nowrap;
-  width: max-content;
+  width:  1920px;
 }
 
 .scroll-text img {
   flex-shrink: 0;
   object-fit: cover;
   margin-right: 20px;
-  border-radius: 16px;
+  border-radius: 20%;
+  box-shadow: 0 10px 20px rgb(0, 0, 0);
 }
 .block{
   @extend %glass2;
@@ -129,13 +131,8 @@ header{
   }
 }
 .gallery-modal-constructor{
-  padding: 70px;
-  width: 60%;
-  border-radius: 10px;
-  text-align: left;
-  @extend %glass2;
-  color: #ffffff;
-  z-index: 10000;
+
+
   input {
     margin-top: 20px;
     padding: 50px;
@@ -168,14 +165,10 @@ header{
     @extend %glass;
   }
   button{
-    border-radius: 40px;
-    border:none;
-    padding: 25px;
+    border-radius: 20px;
+
   }
-  h3{
-    cursor: pointer;
-    text-decoration: underline;
-  }
+
 }
 .header-overlay-hide {
   position: fixed;
@@ -203,33 +196,50 @@ header{
 // === Galemain ===
 .galemain {
   @extend %glass;
-  padding: 24px;
   position: relative;
   z-index: 50;
-
-
+}
+.col-custom {
+  flex: 0 0 22%;  /* между col-2 (≈16.6%) и col-3 (≈25%) */
+  max-width: 22%;
 }
 
 // === CardItem ===
 .cardItem {
-  border-radius: 5px;
-  background-color: rgba(54, 54, 54, 0.448);
+  border-radius: 15px;
+  background-color: rgba(131, 131, 131, 0.45);
   height: 40px;
 }
 
-
+.modal-button{
+  width: 40%;
+  height: 80px;
+}
 // === LeftPanel ===
 .leftPanelGallery {
-  height: 500px;
+  border-radius: 20px;
+  display: flex;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.396);
-  border-radius: 13px;
   font-family: $font-judson;
   color: $white;
 }
+select,.gallery-modal-constructor{
+  width: 50%;
+  padding: 15px 10px;
+  border-radius: 15px;
+  @extend %glass2;
+
+
+  backdrop-filter: blur(35px);
+  text-align: center;
+  background-color: rgba(54, 54, 54, 0.06);
+  color: white;
+  z-index: 10000;
+}
 
 .leftPanelGallery1 {
-
+  border-radius: 30px;
   padding: 20px;
   height: 100px;
   font-family: $font-judson;
@@ -266,6 +276,7 @@ h1, h2, h3 {
   letter-spacing: 1px;
   font-family: $font-raleway;
   font-weight: 100;
+
   text-decoration: none;
 }
 
@@ -329,7 +340,7 @@ Header {
   background: none;
   border-radius: 18px;
   border: 2px solid;
-  color: $white;
+  color: $orange;
   position: relative;
   overflow: hidden;
   font-size: 16px;
@@ -372,13 +383,46 @@ Header {
     transition: transform 0.3s ease-out;
   }
 }
+.getbutton4 {
+  cursor: pointer;
+  width: 50%;
+  height: 60px;
+  box-shadow: 3px 10px $shadow;
+  background: none;
+  border-radius: 18px;
+  border: 1px #ac5acd solid;
+  color: $orange;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  letter-spacing: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &:hover {
+    color: #ffffff;
+    border: 1px solid blanchedalmond;
+    transform: translateY(-7px);
+    box-shadow: 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 1s;
 
+    &::before {
+      width: 300px;
+      height: 300px;
+      opacity: 1;
+    }
+
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+  }
+}
 // === Блоки ===
 .blob, .blobtwo, .blobtree {
   padding: 40px;
   height: 373px;
   border-radius: 13px;
-  color: $white;
+  color: $orange;
 }
 
 .blob {

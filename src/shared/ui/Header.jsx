@@ -11,7 +11,6 @@ function Header() {
         gallery
       </Link>
 
-
       <ModalReg />
     </header>
   );

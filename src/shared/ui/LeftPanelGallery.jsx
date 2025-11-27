@@ -1,5 +1,6 @@
 import React from 'react';
 import ConstructorModal from "@/features/Constructor/ui/ConstructorModal";
+import RevealTwo from "@/shared/ui/RevealTwo";
 
 const LeftPanelGallery = () => {
     return (
@@ -17,11 +18,11 @@ const LeftPanelGallery = () => {
                     </div>
                 </div>
                 <div className="col">
-                    <input type="text" className="gallery-modal-constructor" placeholder="serach"/>
+                    <input type="text" id="search" placeholder="serach"/>
                 </div>
             </div>
             <div className="col leftPanelGallery1 text-center">
-                <ConstructorModal/>
+                    <ConstructorModal/>
             </div>
         </div>
     );

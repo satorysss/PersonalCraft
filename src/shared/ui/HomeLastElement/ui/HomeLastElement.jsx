@@ -1,5 +1,5 @@
 
-function Lastelement() {
+function HomeLastElement() {
   return (
 <div className="container  text-center row p-5 ">
     <div className="col-9 text-center ">
@@ -17,4 +17,4 @@ function Lastelement() {
   );
 }
 
-export default Lastelement;
+export default HomeLastElement;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ModalReg from "../../features/auth/ui/ModalReg";
+import ModalReg from "@/features/auth";
 
 function Header() {
   return (

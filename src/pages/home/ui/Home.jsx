@@ -1,10 +1,10 @@
-import About from '../../../shared/ui/about'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Neon from '../../../shared/ui/NeonAbout'
-import Offer from '../../../shared/ui/OfferSIC'
-import Whychoose from '../../../shared/ui/Why'
-import Lastelement from '../../../shared/ui/Lastelement'
-import Reveal from "@/shared/ui/Reveal";
+import About from "@/shared/ui/About";
+import Offer from "@/shared/ui/HomeOffer";
+import HomeLastElement from "@/shared/ui/HomeLastElement";
+import Reveal from "@/shared/ui/Reveal/Reveal";
+import NeonAbout from "@/shared/ui/NeonAbout";
+
 
 
 function Home() {
@@ -15,7 +15,7 @@ function Home() {
         </Reveal>
 
         <Reveal>
-            <Neon/>
+            <NeonAbout/>
         </Reveal>
 
         <Reveal>
@@ -23,7 +23,7 @@ function Home() {
         </Reveal>
 
         <Reveal>
-            <Lastelement/>
+            <HomeLastElement/>
         </Reveal>
     </div>
   );

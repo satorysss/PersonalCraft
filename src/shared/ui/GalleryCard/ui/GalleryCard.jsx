@@ -1,4 +1,4 @@
-import { gallery } from "@/shared/images/images";
+import { gallery } from "@/shared/ui/images/images";
 
 
 
@@ -7,7 +7,7 @@ export default function Gallery() {
         <div className="row mt-3 text-center gap-5 p-5">
             {gallery.map((image) => (
 
-                <GalleryItem
+                <GalleryCard
                     key={image.id}
                     src={image.src}
                     name={image.name}
@@ -18,7 +18,7 @@ export default function Gallery() {
     );
 }
 
-  function GalleryItem({ src, name, likes, keyProp }) {
+  function GalleryCard({ src, name, likes, keyProp }) {
     return (
       <div className="text-center col-custom galemain p-3 ">
         <div><img src={src} alt={name} width='200'/></div>

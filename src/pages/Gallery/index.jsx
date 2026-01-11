@@ -1,5 +1,1 @@
-import {Gallerry} from "ui/Gallery"
-
-export {
-    Gallerry,
-}
+export { default } from "./ui/Gallery";

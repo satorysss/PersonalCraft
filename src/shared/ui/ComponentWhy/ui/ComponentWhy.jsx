@@ -1,4 +1,4 @@
-import { icons } from "@/shared/images/images";
+import { icons } from "shared/ui/images/images";
 export default function Whychoose() {
     return (
         <div className="block text-white mt-5">

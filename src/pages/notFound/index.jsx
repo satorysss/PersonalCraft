@@ -1,5 +1,1 @@
-import {NotFound} from "ui/NotFound"
-
-export {
-    NotFound,
-}
+export { default } from "./ui/NotFound";

@@ -1,6 +1,6 @@
 // === Переменные ===
 $white: #ffffff;
-$orange: #f45a0d;
+$orange: #0065fa;
 $black: #000;
 $shadow: rgba(44, 9, 44, 0.15);
 $font-raleway: "Raleway", sans-serif;
@@ -482,7 +482,7 @@ Header {
 .blob {
   font-family: $font-inspiration;
   background-color: rgba(0, 0, 0, 24%);
-
+  color: white;
   h1 { font-size: 128px; }
   h3 { font-size: 40px; }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ConstructorModal from "@/features/Constructor";
 const TopGallery = () => {
     return (
-        <div className="row gap-4 col-10 m-auto">
+        <div className="row gap-4 m-auto">
             <div className=" row leftPanelGallery1 ">
                 <div className="col row">
                     <div className="col-5">

@@ -28,9 +28,9 @@ export const galleryy = [
     { id: 1, link: img1 },
     { id: 2, link: img2 },
     { id: 3, link: img3 },
-    { id: 4, link: img4 },
-    { id: 5, link: img5 },
-    { id: 6, link: img6 },
+    { id: 4, link: img1 },
+    { id: 5, link: img2 },
+    { id: 6, link: img3 },
 ];
 export const offerImages =
     {

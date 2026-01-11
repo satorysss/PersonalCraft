@@ -1,6 +1,7 @@
+import {Link} from "react-router-dom";
 export default function Footer(){
     return (
-        <footer className="footer bg-dark text-light mt-5 pt-5">
+        <footer className="footer text-light ">
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -8,10 +9,17 @@ export default function Footer(){
                         <p>PersonalCraft is a platform for creating and selling digital art</p>
                     </div>
                     <div className="col text-center">
+
                         <h2>Company</h2>
-                        <p>About us</p>
-                        <p>Contacts</p>
-                        <p>Terms of use</p>
+                        <p> 
+                            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>Home Page</Link>
+                        </p>
+                        <p> 
+                            <Link to="/Gallery" style={{ textDecoration: "none", color: "inherit" }}>Gallery</Link>
+                        </p>
+                        <p>
+                            <Link to="/About us" style={{ textDecoration: "none", color: "inherit" }}>About us</Link>
+                        </p>
                     </div>
                     <div className="col text-center">
                         <h2>Follow us</h2>

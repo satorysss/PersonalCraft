@@ -3,15 +3,23 @@ import ModalReg from "@/features/auth";
 
 function Header() {
   return (
-    <header >
-      <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-        <h1>PersonalCraft</h1>
-      </Link>
-      <Link to="/Gallery" style={{ textDecoration: "none", color: "inherit" }}>
-        gallery
-      </Link>
+    <header className="col-10 row m-auto">
+      <div className="col-sm-5  col-xl-8 ">
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <h1>PersonalCraft</h1>
+        </Link>
+      </div>
+      <div className="col">
+        <Link to="/Gallery" style={{ textDecoration: "none", color: "inherit" }}>
+          Gallery
+        </Link>
+        
+      </div>
 
-      <ModalReg />
+      <div className="col">
+        <ModalReg />
+      </div>
+
     </header>
   );
 }

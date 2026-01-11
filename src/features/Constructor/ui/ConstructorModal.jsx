@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RevealTwo from "@/shared/ui/RevealTwo";
+import RevealTwo from "@/shared/ui/Reveal/RevealTwo";
 
 export default function ModalReg({}) {
     const [modal, setModal] = useState('closed')

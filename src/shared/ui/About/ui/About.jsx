@@ -1,4 +1,4 @@
-import ScrollText from "@/shared/ui/ScrollText";
+import ScrollText from "@/features/SlideText";
 import {Link} from "react-router-dom";
 
 function Header() {

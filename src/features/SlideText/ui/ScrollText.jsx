@@ -1,4 +1,4 @@
-import {galleryy} from "@/shared/images/images";
+import {galleryy} from "@/shared/ui/images";
 
 function ScrollText  () {
     return (
@@ -24,6 +24,6 @@ function ScrollText  () {
 
 
     );
-};
+}
 
 export default ScrollText;

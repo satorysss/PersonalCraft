@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { galleryy } from "@/shared/images/images";
+import { galleryy } from "shared/ui/images/images";
 
 export default function Carousel() {
     const [index, setIndex] = useState(0);

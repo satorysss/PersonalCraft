@@ -1,8 +1,6 @@
 import React from 'react';
-import ConstructorModal from "@/features/Constructor/ui/ConstructorModal";
-import RevealTwo from "@/shared/ui/RevealTwo";
-
-const LeftPanelGallery = () => {
+import ConstructorModal from "@/features/Constructor";
+const TopGallery = () => {
     return (
         <div className="row gap-4">
             <div className="col row leftPanelGallery1 ">
@@ -28,4 +26,4 @@ const LeftPanelGallery = () => {
     );
 };
 
-export default LeftPanelGallery;
+export default TopGallery;

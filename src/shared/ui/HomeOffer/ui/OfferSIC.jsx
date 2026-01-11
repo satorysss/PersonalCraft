@@ -1,4 +1,4 @@
-import {offerImages} from "@/shared/images/images";
+import {offerImages} from "@/shared/ui/images/images";
 
 
 export default function Offer() {

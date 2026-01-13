@@ -238,7 +238,7 @@ input {
 // === CardItem ===
 .cardItem {
   border-radius: 15px;
-
+  padding-top: 5px;
   background-color: #410ae8;
   height: 40px;
 }
@@ -283,7 +283,11 @@ input {
   font-family: $font-judson;
   color: $white;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25), 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  option{
+    color: darkblue
+  }
 }
 
 
@@ -316,6 +320,7 @@ Header {
   color: $white;
   gap: 20px;
 
+
 }
 .list-group{
   input {
@@ -334,7 +339,7 @@ Header {
   width: 150px;
   height: 60px;
   box-shadow: 3px 10px $shadow;
-  background-color: #273270;
+  background-color: #42031e;
   border-radius: 18px;
   border: none;
   color: $white;

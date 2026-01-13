@@ -4,8 +4,8 @@ function HomeLastElement() {
 <div className="container  text-center row p-5 ">
     <div className="col-9 text-center ">
         <div className="blobtree block ">
-            <h2 className="fs-1">Unleash Your Imagination with AI-Powered Art!</h2>
-            <h3 className="mt-4">Dive into a world where your wildest dreams come to life, one click at a time, and let your creativity run riot!</h3>
+            <h1 className="fs-1">Unleash Your Imagination with AI-Powered Art!</h1>
+            <p className="mt-4">Dive into a world where your wildest dreams come to life, one click at a time, and let your creativity run riot!</p>
 
         </div>
     </div>

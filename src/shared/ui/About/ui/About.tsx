@@ -7,13 +7,13 @@ function Header() {
         <div className="col-12 col-md-6 text-center mt-5">
             <div className="blob p-4 align-items-center">
                 <h1>PersonalCraft</h1>
-                <h3>personal AI avatar generator</h3>
+                <p>personal AI avatar generator</p>
             </div>
         </div>
         <div className="col-12 col-md-10 text-center mt-5">
             <div className="blobtwo p-5 block">
-                <h2 className="fs-1">Unleash Your Imagination with AI-Powered Art!</h2>
-                <h3 className="mt-4">Dive into a world where your wildest dreams come to life, one click at a time, and let your creativity run riot!</h3>
+                <h1 className="fs-1">Unleash Your Imagination with AI-Powered Art!</h1>
+                <p className="mt-4">Dive into a world where your wildest dreams come to life, one click at a time, and let your creativity run riot!</p>
                 <div className="mt-4">
                     <button className="getbutton2 me-3">Take are free</button>
                         <Link to="/Gallery" style={{ textDecoration: "none", color: "inherit" }}>

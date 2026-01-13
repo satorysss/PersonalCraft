@@ -1,5 +1,6 @@
 import { gallery } from "@/shared/ui/images/images";
 import { storeGal } from "@/stores/store";
+
 interface GalleryCardProps {
     src: string;
     name: string;
@@ -19,22 +20,22 @@ export default function Gallery() {
                 />
             ))}
         </div>
+
     );
 }
 
 function GalleryCard({ src, name, likes }: GalleryCardProps) {
     return (
-        <div className="galemain p-3 text-white ">
+        <div className="galemain p-3 text-white  ">
             <img
                 src={src}
                 alt={name}
-                className="gallery-img"
             />
 
-            <div className="gallery-info row text-center justify-content-center align-items-center">
+            <div className=" row text-center justify-content-center align-items-center">
                 <div className="row gap-3">
                     <div className="likes cardItem col">
-                    <span>{likes}</span> 
+                    <span className="m-1">{likes}</span> 
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"

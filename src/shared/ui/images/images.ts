@@ -13,10 +13,19 @@ export const gallery = [
     { id: 1, src: img1, name: "Image 1", likes: 10 },
     { id: 2, src: img2, name: "Image 2", likes: 5 },
     { id: 3, src: img3, name: "Icon 1", likes: 3 },
-    { id: 4, src: img4, name: "Icon 2", likes: 7 },
-    { id: 5, src: img5, name: "Icon 3", likes: 2 },
-    { id: 6, src: img6, name: "Big Image", likes: 20 },
+    { id: 4, src: img1, name: "Image 1", likes: 10 },
+    { id: 5, src: img2, name: "Image 2", likes: 5 },
+    { id: 6, src: img3, name: "Icon 1", likes: 3 },
     { id: 7, src: img1, name: "Image 1", likes: 10 },
+    { id: 8, src: img2, name: "Image 2", likes: 5 },
+    { id: 9, src: img3, name: "Icon 1", likes: 3 },
+    { id: 11, src: img1, name: "Image 1", likes: 10 },
+    { id: 12, src: img2, name: "Image 2", likes: 5 },
+    { id: 13, src: img3, name: "Icon 1", likes: 3 },
+    { id: 14, src: img1, name: "Image 1", likes: 10 },
+    { id: 15, src: img2, name: "Image 2", likes: 5 },
+    { id: 16, src: img3, name: "Icon 1", likes: 3 },
+
 ];
 export const icons = [
     { id: 1, src: icon1, name: "Icon 1", likes: 10 },

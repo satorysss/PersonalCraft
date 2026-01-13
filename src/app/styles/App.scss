@@ -79,7 +79,7 @@ $font-inspiration: "Inspiration", cursive;
   font-family: var($font-judson);
   justify-content: center;
   text-decoration: none;
-  background: linear-gradient(-90.29deg, rgb(12, 9, 9) 20%, rgb(0, 17, 103) 99.8%) no-repeat;
+  background: linear-gradient(-90.29deg, rgb(50, 0, 0) 20%, rgb(0, 17, 103) 99.8%) no-repeat;
   padding-top: 50px;
 }
 .carousel {
@@ -224,14 +224,18 @@ input {
   z-index: 50;
 }
 .col-custom {
-  flex: 0 0 22%;  /* между col-2 (≈16.6%) и col-3 (≈25%) */
-  max-width: 22%;
+  width: 100%;
+  color: #ffe3e3;
 }
-
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
 // === CardItem ===
 .cardItem {
   border-radius: 15px;
-  background-color: rgba(131, 131, 131, 0.45);
+  background-color: #410ae8;
   height: 40px;
 }
 
@@ -451,3 +455,11 @@ Header {
   text-align: left;
 }
 
+footer{
+  p:hover{
+    cursor: pointer;
+    color: $orange;
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+}

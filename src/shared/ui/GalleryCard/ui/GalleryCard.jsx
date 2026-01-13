@@ -1,11 +1,14 @@
 import { gallery } from "@/shared/ui/images/images";
+import { useState } from "react";
 
 
+export default function Gallery(NeedMore) {
 
-export default function Gallery() {
+
+    
     return (
         <div className="row mt-3 text-center gap-5 p-5">
-            {gallery.map((image) => (
+            {gallery.slice(0, visibleCount).map((image) => (
 
                 <GalleryCard
                     key={image.id}

@@ -167,16 +167,19 @@ $font-inspiration: "Inspiration", cursive;
 
 }
 select{
-  width: 100%;
+  width: 80%;
   @extend %glass;
   border: none;
+  padding: 15px;
   text-align: center;
   border-radius: 10px;
   color: #ffffff;
 }
+
 input {
-  padding-left: 10px;
-  border-radius: 30px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
   color: #ffffff;
   @extend %glass;
 }
@@ -231,7 +234,7 @@ input {
 // === CardItem ===
 .cardItem {
   border-radius: 15px;
-  background-color: rgba(131, 131, 131, 0.45);
+  background-color: rgba(98, 0, 255, 0.45);
   height: 40px;
 }
 
@@ -264,7 +267,7 @@ input {
 
 .leftPanelGallery1 {
   border-radius: 10px;
-  height: 50px;
+  height: 80px;
   font-family: $font-judson;
   color: $white;
   align-items: center;

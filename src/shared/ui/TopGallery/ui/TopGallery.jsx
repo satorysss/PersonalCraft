@@ -5,11 +5,17 @@ const TopGallery = () => {
         <div className="row gap-4 m-auto">
             <div className=" row leftPanelGallery1 ">
                 <div className="col row">
-                    <div className="col-5">
+                    <div className="col-3">
                         <p>отфильтровать по:</p>
                     </div>
                     <div className="col">
-                        <select name="" id="">
+                        <select name="" id="" >
+                            <option value="">date</option>
+                            <option value="">likes</option>
+                        </select>
+                    </div>
+                    <div className="col">
+                        <select name="" id="" >
                             <option value="">date</option>
                             <option value="">likes</option>
                         </select>
@@ -18,7 +24,7 @@ const TopGallery = () => {
                 <div className="col">
                     <input type="text" id="search" placeholder="serach"/>
                 </div>
-                <div className="col">
+                <div className="col-1">
                     <ConstructorModal/>
                 </div>
             </div>

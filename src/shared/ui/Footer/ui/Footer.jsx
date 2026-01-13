@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 export default function Footer(){
     return (
-        <footer className="footer text-light ">
+        <footer className="footer text-light mt-5">
             <div className="container">
                 <div className="row">
                     <div className="col">

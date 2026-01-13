@@ -45,7 +45,9 @@
     ]
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.4"
+    "@vitejs/plugin-react": "^5.0.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "vite.config.js",

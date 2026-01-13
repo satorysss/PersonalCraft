@@ -6,20 +6,23 @@ import Home from "@/pages/home";
 import NotFound from "@/pages/notFound";
 import Footer from "@/shared/ui/Footer";
 import Header from "@/shared/ui/Header";
+import { UpButton } from '@/shared/ui/buttons/ui/upButton';
 
 
 function App() {
+
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Gallery" element={<Gallery />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Gallery" element={<Gallery/>}/>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>       
+        <UpButton/>
+        <Footer/>
 
-        <Footer />
       </div>
     </Router>
   );

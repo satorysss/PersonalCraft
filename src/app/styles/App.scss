@@ -242,7 +242,14 @@ input {
   background-color: #410ae8;
   height: 40px;
 }
-
+.gallery-info{
+  .cardItem:hover{
+    transition: 1s;
+    color: #000;
+    background-color: #ffffff;
+    transform: scale(1.05)
+  }
+}
 .modal-button{
   width: 40%;
   height: 80px;

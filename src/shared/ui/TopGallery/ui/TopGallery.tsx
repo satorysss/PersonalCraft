@@ -21,6 +21,7 @@ const TopGallery = () => {
                         </select>
                     </div>
                 </div>
+
                 <div className="col">
                     <input type="text" id="search" placeholder="serach"/>
                 </div>

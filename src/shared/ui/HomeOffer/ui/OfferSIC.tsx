@@ -10,7 +10,7 @@ export default function Offer() {
                         <div>
                         <h2>Custom art generation</h2>
                         <p>Unleash the artist within You!</p>
-                        <button className="getbutton3">Start creating</button>
+                        <button className="getbutton3"><span>Start creating</span></button>
                         </div>
 
                     </div>

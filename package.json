@@ -19,7 +19,8 @@
     "react-scripts": "5.0.1",
     "sass": "^1.91.0",
     "vite": "^7.1.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.10"
   },
   "scripts": {
     "dev": "vite",
@@ -46,5 +47,17 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.4"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satorysss/PersonalCraft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satorysss/PersonalCraft/issues"
+  },
+  "homepage": "https://github.com/satorysss/PersonalCraft#readme"
 }

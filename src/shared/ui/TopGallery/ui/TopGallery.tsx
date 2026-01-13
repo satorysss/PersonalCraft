@@ -2,10 +2,10 @@ import React from 'react';
 import ConstructorModal from "@/features/Constructor";
 const TopGallery = () => {
     return (
-        <div className="row gap-4">
-            <div className="col row leftPanelGallery1 ">
+        <div className="row gap-4 m-auto">
+            <div className=" row leftPanelGallery1 ">
                 <div className="col row">
-                    <div className="col-7">
+                    <div className="col-5">
                         <p>отфильтровать по:</p>
                     </div>
                     <div className="col">
@@ -18,9 +18,9 @@ const TopGallery = () => {
                 <div className="col">
                     <input type="text" id="search" placeholder="serach"/>
                 </div>
-            </div>
-            <div className="col leftPanelGallery1 text-center">
+                <div className="col">
                     <ConstructorModal/>
+                </div>
             </div>
         </div>
     );

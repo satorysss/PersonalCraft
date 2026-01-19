@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import About from "@/shared/ui/About";
-import Offer from "@/shared/ui/HomeOffer";
-import HomeLastElement from "@/shared/ui/HomeLastElement";
+
 import Reveal from "@/shared/ui/Reveal/Reveal";
-import NeonAbout from "@/shared/ui/NeonAbout";
+import About from "@/widgets/About";
+import NeonAbout from "@/widgets/NeonAbout";
+import Offer from "@/widgets/HomeOffer";
+import HomeLastElement from "@/widgets/HomeLastElement";
 
 
 

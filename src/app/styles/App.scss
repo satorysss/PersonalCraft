@@ -225,6 +225,20 @@ input {
   @extend %glass;
   position: relative;
   z-index: 50;
+  .cardItem {
+    border-radius: 15px;
+    background-color: #410ae8;
+    height: 40px;
+    align-items: center;
+  }
+  .cardItem:hover {
+    transform: scale(1.04);
+    transition: 1s;
+    cursor: pointer;
+    background-color: #f3f1f1;
+    color: #000000;
+  }
+
 }
 .col-custom {
   width: 100%;
@@ -235,21 +249,8 @@ input {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 24px;
 }
-// === CardItem ===
-.cardItem {
-  border-radius: 15px;
-  padding-top: 5px;
-  background-color: #410ae8;
-  height: 40px;
-}
-.gallery-info{
-  .cardItem:hover{
-    transition: 1s;
-    color: #000;
-    background-color: #ffffff;
-    transform: scale(1.05)
-  }
-}
+
+
 .modal-button{
   width: 40%;
   height: 80px;

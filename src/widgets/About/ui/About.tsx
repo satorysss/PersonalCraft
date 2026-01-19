@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 function Header() {
   return (
-    <div className=" d-flex flex-column align-items-center ">
+    <div className=" d-flex flex-column align-items-center">
         <div className="col-12 col-md-6 text-center mt-5">
             <div className="blob p-4 align-items-center">
                 <h1>PersonalCraft</h1>

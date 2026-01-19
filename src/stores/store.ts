@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import {GalleryI} from "@/entities/galleryT/model/types";
+import {getGallery} from "@/entities/galleryT/api/mock";
 
 interface GallleryStore {
     value: number,
@@ -8,7 +9,7 @@ interface GallleryStore {
 }
 interface CardStore {
     items: GalleryI[],
-    setItems: (items: GalleryI[]) => void,
+    load: () => Promise<void>
 }
 
 export const storeGal = create<GallleryStore>()((set) => ({
@@ -18,6 +19,8 @@ export const storeGal = create<GallleryStore>()((set) => ({
 }))
 export const CardStore = create<CardStore>()((set) => ({
     items: [],
-    setItems: (items) => set({ items })
-
+    load: async () => {
+        const data = await getGallery()
+        set({ items: data })
+    }
 }))

@@ -4,14 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Gallery from "@/pages/Gallery";
 import Home from "@/pages/home";
 import NotFound from "@/pages/notFound";
-import Footer from "@/shared/ui/Footer";
-import Header from "@/shared/ui/Header";
+import Footer from "@/widgets/Footer";
+import Header from "@/widgets/Header";
+
 
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App min-vh-100">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

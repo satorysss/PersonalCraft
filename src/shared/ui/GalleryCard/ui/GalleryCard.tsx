@@ -1,6 +1,4 @@
-import { gallery } from "@/shared/ui/images/images";
-import { storeGal } from "@/stores/store";
-
+import {CardStore, storeGal} from "@/stores/store";
 interface GalleryCardProps {
     src: string;
     name: string;
@@ -9,14 +7,15 @@ interface GalleryCardProps {
 
 export default function Gallery() {
     const visibleBlocks = storeGal((s) => s.value);
+    const items = CardStore((s) => s.items)
 
     return (
         <div className="gallery-grid mt-5">
-            {gallery.slice(0, visibleBlocks).map((image) => (
+            {items.slice(0, visibleBlocks).map((image) => (
                 <GalleryCard
                     key={image.id}
                     src={image.src}
-                    name={image.name}
+                    name={image.author}
                     likes={image.likes}
                 />
             ))}

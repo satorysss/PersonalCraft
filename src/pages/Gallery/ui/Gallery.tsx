@@ -1,7 +1,7 @@
 import Reveal from "@/shared/ui/Reveal/Reveal";
-import TopGallery from "@/shared/ui/TopGallery";
 import GalleryCard from "@/shared/ui/GalleryCard";
 import {storeGal} from "@/stores/store";
+import TopGallery from "@/widgets/TopGallery";
 
 
 

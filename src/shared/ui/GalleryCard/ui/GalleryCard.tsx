@@ -1,6 +1,5 @@
-import { gallery } from "@/shared/ui/images/images";
-import { storeGal } from "@/stores/store";
-
+import {CardStore, storeGal} from "@/stores/store";
+import {useEffect} from "react";
 interface GalleryCardProps {
     src: string;
     name: string;
@@ -9,33 +8,50 @@ interface GalleryCardProps {
 
 export default function Gallery() {
     const visibleBlocks = storeGal((s) => s.value);
-
     return (
         <div className="gallery-grid mt-5">
-            {gallery.slice(0, visibleBlocks).map((image) => (
-                <GalleryCard
+            {items.slice(0, visibleBlocks).map((image) => (
+                <Card
                     key={image.id}
                     src={image.src}
-                    name={image.name}
+                    name={image.author}
                     likes={image.likes}
                 />
             ))}
         </div>
+
     );
 }
 
-function GalleryCard({ src, name, likes }: GalleryCardProps) {
+function Card({ src, name, likes }: GalleryCardProps) {
     return (
-        <div className="galemain p-3 text-white">
+        <div className="galemain p-3 text-white  ">
             <img
                 src={src}
                 alt={name}
-                className="gallery-img"
             />
+            <div className="p-3">
+                <div className="row m-auto gap-3">
+                    <div className="likes cardItem col">
+                        <span>{likes}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="15"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                            />
+                        </svg>
+                    </div>
 
-            <div className="gallery-info row">
-                <div className="likes cardItem col">
-                    {likes}
+<<<<<<< HEAD
+            <div className=" row text-center justify-content-center align-items-center">
+                <div className="row gap-3">
+                    <div className="likes cardItem col">
+                    <span className="m-1">{likes}</span> 
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -48,14 +64,33 @@ function GalleryCard({ src, name, likes }: GalleryCardProps) {
                             d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
                         />
                     </svg>
+                    </div>
+
+                    <div className="name cardItem col"><span>{name}</span></div> 
+                    <div className="copy cardItem"><span>Copy Key</span></div>      
                 </div>
 
-                <div className="name cardItem col">{name}</div>
+
             </div>
 
-            <div className="copy cardItem">
-                Copy Key
-            </div>
+
         </div>
+=======
+                    <div className="name cardItem col">
+                        <span>
+                            {name}
+                        </span>
+                    </div>
+                </div>
+
+                <div className="cardItem m-auto mt-2">
+                    <span>
+                        Copy Key
+                    </span>
+                </div>
+            </div>
+            </div>
+
+>>>>>>> 500b59aba808e5072dffb5706356b9e9487864df
     );
 }

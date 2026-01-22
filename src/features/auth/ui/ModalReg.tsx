@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import RevealTwo from "@/shared/ui/Reveal/RevealTwo";
+import { useForm, SubmitHandler } from "react-hook-form"
 
+
+
+interface IFormInput {
+    firstName: string
+    pass: string
+}
 export default function ModalReg() {
+    const { register, handleSubmit } = useForm<IFormInput>()
+    const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data)
     const [modal, setModal] = useState('closed')
 
     const closeWindow = () =>{setModal('closed');
@@ -22,9 +31,23 @@ export default function ModalReg() {
           <div className="items-center header-modal-reg " onClick={(e)=>e.stopPropagation()}>
             <RevealTwo>
                 <h2>Login</h2>
-                <form className="list-group gap-2 ">
-                    <input type="text" id="username" name="username" required placeholder="Enter username" />
-                    <input type="password" id="password" name="password" required placeholder="Enter password" />
+                <form
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="list-group gap-2 ">
+                    <input
+                        type="text"
+                        id="username"
+                        required
+                        placeholder="Enter username"
+                        {...register("firstName")}
+                    />
+                    <input
+                        type="password"
+                        id="password"
+                        required
+                        placeholder="Enter password"
+                        {...register("pass")}
+                    />
                     <div className="text-center">
                         <button className="mt-5 getbutton4" type="submit">Auth</button>
                     </div>

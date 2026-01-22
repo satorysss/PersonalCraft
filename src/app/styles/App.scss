@@ -167,16 +167,19 @@ $font-inspiration: "Inspiration", cursive;
 
 }
 select{
-  width: 100%;
+  width: 80%;
   @extend %glass;
   border: none;
+  padding: 15px;
   text-align: center;
   border-radius: 10px;
   color: #ffffff;
 }
+
 input {
-  padding-left: 10px;
-  border-radius: 30px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
   color: #ffffff;
   @extend %glass;
 }
@@ -222,6 +225,20 @@ input {
   @extend %glass;
   position: relative;
   z-index: 50;
+  .cardItem {
+    border-radius: 15px;
+    background-color: #410ae8;
+    height: 40px;
+    align-items: center;
+  }
+  .cardItem:hover {
+    transform: scale(1.04);
+    transition: 1s;
+    cursor: pointer;
+    background-color: #f3f1f1;
+    color: #000000;
+  }
+
 }
 .col-custom {
   width: 100%;
@@ -232,12 +249,7 @@ input {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 24px;
 }
-// === CardItem ===
-.cardItem {
-  border-radius: 15px;
-  background-color: #410ae8;
-  height: 40px;
-}
+
 
 .modal-button{
   width: 40%;
@@ -268,11 +280,15 @@ input {
 
 .leftPanelGallery1 {
   border-radius: 10px;
-  height: 50px;
+  height: 80px;
   font-family: $font-judson;
   color: $white;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25), 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  option{
+    color: darkblue
+  }
 }
 
 
@@ -305,6 +321,7 @@ Header {
   color: $white;
   gap: 20px;
 
+
 }
 .list-group{
   input {
@@ -323,7 +340,7 @@ Header {
   width: 150px;
   height: 60px;
   box-shadow: 3px 10px $shadow;
-  background-color: #273270;
+  background-color: #42031e;
   border-radius: 18px;
   border: none;
   color: $white;

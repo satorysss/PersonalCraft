@@ -6,6 +6,7 @@ import Home from "@/pages/home";
 import NotFound from "@/pages/notFound";
 import Footer from "@/widgets/Footer";
 import Header from "@/widgets/Header";
+import UserProfile from "@/pages/UserProfile";
 
 
 
@@ -17,7 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Gallery" element={<Gallery />} />
-          <Route path="*" element={<NotFound />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

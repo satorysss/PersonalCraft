@@ -13,6 +13,9 @@ function Header() {
         <Link to="/Gallery" style={{ textDecoration: "none", color: "inherit" }}>
           Gallery
         </Link>
+          <Link to="/profile" style={{ textDecoration: "none", color: "inherit" }}>
+              profile
+          </Link>
         
       </div>
 

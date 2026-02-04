@@ -215,8 +215,16 @@ input {
   z-index: 9999;
 }
 
+.userSidebar{
+  background: hsla(0, 0%, 15%, 0.52);
+  box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.47);
 
-
+}
+.sidebar-nameSpace{
+  position: relative;
+  bottom: 20%;
+  margin: 15px;
+}
 // === Galemain ===
 .galemain {
   @extend %glass;

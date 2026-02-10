@@ -1,12 +1,12 @@
 import {Link} from "react-router-dom";
+import {offerImages} from "@/shared/ui/images/images";
 export default function Footer(){
     return (
         <footer className="footer text-light pt-5 ">
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <h1>PersonalCraft</h1>
-                        <span>PersonalCraft is a platform for creating and selling digital art</span>
+                            <img src={offerImages.PersonaCraft} alt="" />
                     </div>
                     <div className="col text-center">
 

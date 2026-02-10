@@ -4,15 +4,15 @@ export default function NeonAbout() {
             <div className="container">
                 <div className="row p-5">
                     <div className="col">
-                        <h2>What is NeonArtistry?</h2>
+                        <h1>What is NeonArtistry?</h1>
                     </div>
                 </div>
                 <div className="row justify-content-center text-center p-5">
-                    <div className="col-md-5">
-                        <h3>Welcome to NeonArtistry, where creativity knows no bounds! Our cutting-edge neural</h3>
+                    <div className="col-md-4">
+                        <p>Welcome to NeonArtistry, where creativity knows no bounds! Our cutting-edge neural</p>
                     </div>
-                    <div className="col-md-5">
-                        <h3>Welcome to NeonArtistry, where creativity knows no bounds! Our cutting-edge neural</h3>
+                    <div className="col-md-4">
+                        <p>Welcome to NeonArtistry, where creativity knows no bounds! Our cutting-edge neural</p>
                     </div>
                 </div>
             </div>

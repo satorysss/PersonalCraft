@@ -9,7 +9,7 @@ export default function Gallery() {
     const incrementVisible = storeGal((state) => state.visibleIncrement)
 
     return (
-        <div className="container text-center">
+        <div className="container text-center ">
             <h2 className=" fs-1 text-light mt-5">Галлерея сгенерированных изображений </h2>
 
                     <TopGallery/>

@@ -28,7 +28,7 @@ export default function ModalReg() {
 
         <div onClick={closeWindow} className="header-modal-body">
             <div className="header-overlay-hide"></div>
-          <div className="items-center header-modal-reg " onClick={(e)=>e.stopPropagation()}>
+          <div className="items-center header-modal-reg col col-md-7 m-4" onClick={(e)=>e.stopPropagation()}>
             <RevealTwo>
                 <h2>Login</h2>
                 <form
@@ -69,7 +69,7 @@ export default function ModalReg() {
           {modal  === 'reg' && (
               <div onClick={closeWindow} className="header-modal-body">
                   <div className="header-overlay-hide"></div>
-                  <div className="items-center header-modal-reg " onClick={(e)=>e.stopPropagation()}>
+                  <div className="items-center header-modal-reg col col-md-7 m-4" onClick={(e)=>e.stopPropagation()}>
                         <RevealTwo>
                             <h2>Registration</h2>
                             <form className="list-group gap-2">

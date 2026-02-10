@@ -2,7 +2,7 @@ import {galleryy} from "@/shared/ui/images";
 
 function ScrollText  () {
     return (
-        <div className="carousel">
+        <div className="carousel mt-4">
             <div className="scroll-text">
                 {galleryy.map((img, i) => (
                     <img key={i} src={img.link} alt=""  />

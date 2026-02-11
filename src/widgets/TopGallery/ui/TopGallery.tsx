@@ -12,12 +12,9 @@ const TopGallery = () => {
                         <option value="">likes</option>
                     </select>
                 </div>
-                <div className="col">
-                    <input type="text" id="search" placeholder="serach"/>
-                </div>
-                <div className="col">
-                    <ConstructorModal/>
-                </div>
+
+
+
             </div>
     );
 };

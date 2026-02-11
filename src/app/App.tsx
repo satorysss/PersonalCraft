@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Gallery from "@/pages/Gallery";
 import Home from "@/pages/home";
 import NotFound from "@/pages/notFound";
+
+import { UpButton } from '@/shared/ui/buttons/ui/upButton';
+
 import Footer from "@/widgets/Footer";
 import Header from "@/widgets/Header";
 import UserProfile from "@/pages/UserProfile";
@@ -11,6 +14,7 @@ import UserProfile from "@/pages/UserProfile";
 
 
 function App() {
+
   return (
     <Router>
       <div className="App min-vh-100">
@@ -22,7 +26,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
         </Routes>
 
-        <Footer />
+
       </div>
     </Router>
   );

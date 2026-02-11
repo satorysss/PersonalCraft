@@ -10,8 +10,8 @@ export default function Footer(){
                     </div>
                     <div className="col text-center">
 
-                        <h2>Company</h2>
-                        <div className="m-4">
+                        <h1>Company</h1>
+                        <div className="m-4 ">
                             <p>
                                 <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>Home Page</Link>
                             </p>
@@ -25,7 +25,7 @@ export default function Footer(){
 
                     </div>
                     <div className="col text-center">
-                        <h2>Follow us</h2>
+                        <h1>Follow us</h1>
                         <div className="m-4">
                             <p>Instagram</p>
                             <p>Facebook</p>

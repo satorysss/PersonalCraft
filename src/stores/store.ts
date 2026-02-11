@@ -5,17 +5,15 @@ import {getGallery} from "@/entities/galleryT/api/mock";
 interface GallleryStore {
     value: number,
     visibleIncrement: () => void,
-
 }
 interface CardStore {
     items: GalleryI[],
     load: () => Promise<void>
 }
 
-export const storeGal = create<GallleryStore>()((set) => ({
+export const storeGal = create<GallleryStore>((set, get) => ({
     value: 4,
     visibleIncrement: () => set((state) => ({ value: state.value + 4 }))
-
 }))
 export const CardStore = create<CardStore>()((set) => ({
     items: [],

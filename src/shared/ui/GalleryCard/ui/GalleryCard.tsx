@@ -8,11 +8,6 @@ interface GalleryCardProps {
 
 export default function Gallery() {
     const visibleBlocks = storeGal((s) => s.value);
-    const items = CardStore((s) => s.items)
-    const load = CardStore((s) => s.load)
-    useEffect(() => {
-            load()
-    },  [])
     return (
         <div className="gallery-grid mt-5">
             {items.slice(0, visibleBlocks).map((image) => (
@@ -24,6 +19,7 @@ export default function Gallery() {
                 />
             ))}
         </div>
+
     );
 }
 
@@ -33,7 +29,6 @@ function Card({ src, name, likes }: GalleryCardProps) {
             <img
                 src={src}
                 alt={name}
-                className="gallery-img"
             />
             <div className="p-2 ">
                 <div className="row m-auto gap-3">
@@ -54,6 +49,33 @@ function Card({ src, name, likes }: GalleryCardProps) {
                     </div>
 
                     <div className="name Gallery-cardItem col">
+            <div className=" row text-center justify-content-center align-items-center">
+                <div className="row gap-3">
+                    <div className="likes cardItem col">
+                    <span className="m-1">{likes}</span> 
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            fillRule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                        />
+                    </svg>
+                    </div>
+
+                    <div className="name cardItem col"><span>{name}</span></div> 
+                    <div className="copy cardItem"><span>Copy Key</span></div>      
+                </div>
+
+
+            </div>
+
+
+        </div>
                         <span>
                             {name}
                         </span>

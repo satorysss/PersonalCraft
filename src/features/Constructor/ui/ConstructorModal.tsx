@@ -3,7 +3,7 @@ import RevealTwo from "@/shared/ui/Reveal/RevealTwo";
 
 export default function ModalReg({}) {
     const [modal, setModal] = useState('closed')
-    const [formatThumb, setFormatThumb] = useState(null)
+    const [formatThumb, setFormatThumb] = useState<string | null>(null)
     const closedwindow = () =>{setModal('closed');
     }
 
@@ -12,7 +12,7 @@ export default function ModalReg({}) {
 
     return (
         <div>
-            <button className="getbutton" onClick={opendwindow}>Constructor</button>
+            <button className="getbutton3" onClick={opendwindow}>Constructor</button>
 
             {modal  === 'open' && (
 
@@ -20,7 +20,7 @@ export default function ModalReg({}) {
                     <div className="header-overlay-hide"></div>
                     <div className="z">
                         <RevealTwo>
-                            <div className="gallery-modal-constructor " onClick={(e)=>e.stopPropagation()}>
+                            <div className="gallery-modal-constructor p-5 m-2" onClick={(e)=>e.stopPropagation()}>
                                 <h2>create interface image</h2>
                                 <form className="list-group">
                                     <input type="text" id="username" name="username" required placeholder="Enter prop" />
@@ -38,7 +38,7 @@ export default function ModalReg({}) {
                                             </button>
                                         ))}
                                     </div>
-                                    <button className="mt-5" type="submit">create</button>
+                                    <button className="mt-5 getbutton4" type="submit">create</button>
                                 </form>
                             </div>
                         </RevealTwo>

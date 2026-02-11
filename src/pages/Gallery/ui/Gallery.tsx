@@ -10,7 +10,7 @@ export default function Gallery() {
     const value = storeGal((s) => s.value);
     const migal = value <= gallery.length
     return (
-        <div className="container text-center">
+        <div className="container text-center ">
             <h2 className=" fs-1 text-light mt-5">Галлерея сгенерированных изображений </h2>
 
                     <TopGallery/>

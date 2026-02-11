@@ -1,194 +1,117 @@
-// === Переменные ===
-$white: #ffffff;
-$orange: #0065fa;
-$black: #000;
-$shadow: rgba(44, 9, 44, 0.15);
-$font-raleway: "Raleway", sans-serif;
-$font-judson: "Judson", serif;
-$font-inspiration: "Inspiration", cursive;
-// === Общий "стеклянный" стиль ===
-%glass {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 25px;
-  backdrop-filter: blur(40px) saturate(150%);
-  -webkit-backdrop-filter: blur(40px) saturate(250%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow:
-          inset 0 0 1px rgba(255, 255, 255, 0.25),
-          0 10px 40px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-    box-shadow:
-            0 0 25px rgba(131, 0, 37, 0.25),
-            0 0 40px rgba(0, 70, 255, 0.25);
-  }
-}
-%glass2 {
-  background: linear-gradient(
-                  135deg,
-                  rgba(255, 0, 70, 0.15),
-                  rgba(0, 70, 255, 0.15)
-  );
-  border-radius: 20px;
-  backdrop-filter: blur(25px) saturate(220%);
-  -webkit-backdrop-filter: blur(25px) saturate(220%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow:
-          0 0 20px rgba(255, 0, 70, 0.2),
-          0 0 40px rgba(0, 70, 255, 0.15),
-          inset 0 0 1px rgba(255, 255, 255, 0.3);
-}
-
 // === Сброс ===
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.reveal {
-  opacity: 0;
-  transform: translateY(90px);
-  transition: all 0.9s ease;
-}
-.revealModal {
-  opacity: 0;
+// === Переменные ===
+$white: #ffffff;
+$p-color: #eaeaea;
 
-}
-.z{
-  z-index: 10000;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.revealModal.visible {
-  opacity: 1;
-  transition: all 2s ease;
-
-}
+$orange: #ffffff;
+$black: #000;
+$ActiveColor: #ff0066;
+$HeaderBgColor : linear-gradient(90.29deg, rgb(80, 8, 8) 20%, rgb(0, 0, 0) 99.8%) no-repeat;
+$MainBgColor: linear-gradient(-90.29deg, rgb(80, 8, 8) 20%, rgb(0, 17, 103) 99.8%) no-repeat;
+$shadow: rgba(44, 9, 44, 0.15);
+$font-raleway: "Raleway", sans-serif;
+$font-judson: "Judson", serif;
+$font-anonimus:"Anonymous Pro", monospace;
+$font-inspiration: "Inspiration", cursive;
 
 // === Импорты ===
 @import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "Glass";
+@import 'UserProfile';
+@import 'Animation';
+@import 'Buttons';
+@import 'Reveal';
+@import 'Gallery';
 
-// === App ===
-.App {
-  font-family: var($font-judson);
-  justify-content: center;
-  text-decoration: none;
-  background: linear-gradient(-90.29deg, rgb(50, 0, 0) 20%, rgb(0, 17, 103) 99.8%) no-repeat;
-  padding-top: 50px;
+p {
+  letter-spacing: 1px;
+  font-family: $font-anonimus;
+  font-weight: 100;
+  color:$p-color;
 }
-.carousel {
-  margin: 50px;
-  position: relative;
-  overflow: hidden;
+h1 {
+  font-family: $font-anonimus;
+  font-weight: 100;
+}
+span{
+  font-weight: 700;
+}
+select{
+  padding: 15px;
   width: 100%;
-  max-width: 1920px;
-  display: flex;
-  flex-direction: column;
-}
-
-.scroll-text {
-  display: flex;
-  white-space: nowrap;
-  width:  1920px;
-}
-
-
-.block{
+  color: $p-color;
   @extend %glass2;
-  margin: 50px;
-}
-/* Верхняя дорожка (вправо) */
-.scroll-text:nth-child(1) {
-  animation: scroll-right 15s linear infinite alternate ;
-}
-
-/* Нижняя дорожка (влево) */
-.scroll-text:nth-child(2) {
-  animation: scroll-left 15s linear infinite alternate ;
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-.gallery-modal-constructor{
-  width: 800px;
+  border: none;
   text-align: center;
-
-  .input-group{
-    margin-top: 20px;
-  }
-  button{
-    width: 10%;
-    height: 40px;
-    border-radius: 10px;
-    background: none;
-    border: 1px solid #fafafa;
-    margin: 10px;
-    color: white;
-  }
-  button:hover{
-  transform: scale(1.05);
-  }
+  border-radius: 10px;
 }
-.header-modal-reg{
-  padding: 40px;
-  width: 40%;
+input {
+  color: $p-color;
   border-radius: 10px;
   @extend %glass2;
-  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+}
+// === App ===
+.App {
+  letter-spacing: 1px;
+  color: $white;
+  font-family: $font-anonimus;
+  font-size: calc(3px + 2vmin);
+  justify-content: center;
+  text-decoration: none;
+  background:$MainBgColor;
+  padding-top: 50px;
+}
+
+.offerrImg{
+  width: 100%;
+}
+// === Modal-auth ===
+.header-modal-reg{
+  padding: 40px;
+  border-radius: 10px;
+  @extend %glass2;
   z-index: 10000;
-
-
-
   button{
     border-radius: 20px;
 
   }
-
 }
-select{
-  width: 80%;
-  @extend %glass;
-  border: none;
-  padding: 15px;
-  text-align: center;
-  border-radius: 10px;
-  color: #ffffff;
-}
-
-input {
-  width: 100%;
-  padding: 15px;
-  border-radius: 10px;
-  color: #ffffff;
-  @extend %glass;
-}
-.header-overlay-hide {
+.header-modal-body {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
-  backdrop-filter: blur(35px) saturate(200%);
+  input {
+    margin-top: 20px;
+    padding: 30px;
+    height: 30px;
+    border-radius: 10px;
+    @extend %glass;
+  }
+}
+// === Modal-constructor===
+.gallery-modal-constructor{
+  padding: 5px 10px;
+  border-radius: 15px;
+  @extend %glass2;
+  text-align: center;
+  .input-group{
+    margin-top: 20px;
+  }
 }
 .format-btn {
   margin: 0 5px;
@@ -200,283 +123,59 @@ input {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 .format-btn.active {
-  background: #ff0066; /* активная подсветка */
-  border-color: #ff0066;
+  background: $ActiveColor; /* активная подсветка */
+  border-color: $ActiveColor;
 }
-// === Modal ===
-.header-modal-body {
+
+.header-overlay-hide {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
+  backdrop-filter: blur(35px) saturate(200%);
 }
+// === Modal-constructor===
 
 
-
-// === Galemain ===
-.galemain {
-  @extend %glass;
-  position: relative;
-  z-index: 50;
-  .cardItem {
-    border-radius: 15px;
-    background-color: #410ae8;
-    height: 40px;
-    align-items: center;
-  }
-  .cardItem:hover {
-    transform: scale(1.04);
-    transition: 1s;
-    cursor: pointer;
-    background-color: #f3f1f1;
-    color: #000000;
-  }
-
-}
-.col-custom {
-  width: 100%;
-  color: #ffe3e3;
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 24px;
-}
-
-
-.modal-button{
-  width: 40%;
-  height: 80px;
-}
-// === LeftPanel ===
-.leftPanelGallery {
-  border-radius: 20px;
-  display: flex;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.396);
-  font-family: $font-judson;
-  color: $white;
-}
-.gallery-modal-constructor{
-  padding: 15px 10px;
-  border-radius: 15px;
-  @extend %glass2;
-  .input{
-    border-radius: 5px;
-    backdrop-filter: blur(40px) saturate(150%);
-    -webkit-backdrop-filter: blur(40px) saturate(250%);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.25), 0 10px 40px rgba(0, 0, 0, 0.3);
-  }
-
-}
-
-.leftPanelGallery1 {
-  border-radius: 10px;
-  height: 80px;
-  font-family: $font-judson;
-  color: $white;
-  align-items: center;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25), 0 10px 40px rgba(0, 0, 0, 0.3);
-
-  option{
-    color: darkblue
-  }
-}
-
-
-// === Заголовки и текст ===
-h1, h2, h3 {
-  letter-spacing: 1px;
-  font-family: $font-raleway;
-  font-weight: 100;
-
-  text-decoration: none;
-}
-
-p {
-  letter-spacing: 1px;
-  font-family: $font-raleway;
-  font-weight: 100;
-}
-
-h1 {
-  font-family: $font-inspiration;
-}
 
 // === Header ===
 Header {
   align-items: center;
   padding: 15px;
+  position: relative;
   border-radius: 18px;
-  font-size: calc(7px + 2vmin);
-  font-weight: bold;
   color: $white;
   gap: 20px;
-
-
 }
-.list-group{
-  input {
-    margin-top: 20px;
-    padding: 30px;
-    height: 30px;
-    border-radius: 10px;
-    color: #ffffff;
-   
-    @extend %glass;
+footer{
+  p{
+    transition: 1s ease-in-out;
   }
-}
-// === Кнопки ===
-.getbutton {
-  cursor: pointer;
-  width: 150px;
-  height: 60px;
-  box-shadow: 3px 10px $shadow;
-  background-color: #42031e;
-  border-radius: 18px;
-  border: none;
-  color: $white;
-
-  &:hover {
-    background-color: $white;
-    transition: 0.8s;
-    color: $black;
-    transform: scale(1.03);
-  }
-}
-
-.getbutton2 {
-  @extend .getbutton;
-  background-color: #14268d;
-  box-shadow: 3px 7px $shadow;
-}
-
-.getbutton3 {
-  cursor: pointer;
-  width: 150px;
-  height: 60px;
-  box-shadow: 3px 10px $shadow;
-  background: none;
-  border-radius: 18px;
-  border: 2px solid;
-  color: $orange;
-  position: relative;
-  overflow: hidden;
-  font-size: 16px;
-  letter-spacing: 2px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: rgba(0, 25, 251, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
-  }
-
-  &:hover {
-    color: rgb(255, 255, 255);
-    border: none;
-    transform: translateY(-5px);
-    box-shadow: 5px 15px rgba(0, 0, 0, 0.3);
-
-    &::before {
-      width: 300px;
-      height: 300px;
-      opacity: 1;
-    }
-
-    span {
-      transform: translateY(-3px);
-    }
-  }
-
-  span {
-    display: inline-block;
-    transition: transform 0.3s ease-out;
-  }
-}
-.getbutton4 {
-  cursor: pointer;
-  width: 50%;
-  height: 60px;
-  background: none;
-  border-radius: 18px;
-  border: 2px #7b0ba7 solid;
-  color: $orange;
-  position: relative;
-  overflow: hidden;
-  font-size: 18px;
-  letter-spacing: 2px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  &:hover {
-    color: #ffffff;
-    border: 2px solid blanchedalmond;
-    transform: translateY(-7px);
+  p:hover{
+    cursor: pointer;
+    color: #7b0ba7;
+    text-decoration: underline;
     transition: 0.5s;
-
-    &::before {
-      width: 300px;
-      height: 300px;
-      opacity: 1;
-    }
-
-  }
-
-  span {
-    display: inline-block;
-    transition: transform 0.3s ease-out;
+    transform: scale(1.1);
   }
 }
-// === Блоки ===
+// === footer === ///
+
+// === Блоки лендинга ===
 .blob, .blobtwo, .blobtree {
   padding: 40px;
   border-radius: 25px;
   color: white;
-  button{
-    font-family: sans-serif ;
-  }
-}
+  margin: 5vw ;
+  @extend %glass2;
 
-.blob {
+}
+.block {
   font-family: $font-judson ;
   background-color: rgba(0, 0, 0, 24%);
   color: white;
-  h1 { font-size: 128px; }
-  h3 { font-size: 40px; }
-}
+  margin: 5vw ;
 
-.blobtwo {
-  font-family: $font-judson;
-  font-weight: 700;
-  text-align: left;
-}
-
-.blobtree {
-  font-family: $font-judson;
-  font-weight: 700;
-  text-align: left;
-}
-
-footer{
-  p:hover{
-    cursor: pointer;
-    color: $orange;
-    transition: 0.5s;
-    transform: scale(1.1);
-  }
+  @extend %glass2;
 }

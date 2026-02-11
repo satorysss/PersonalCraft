@@ -1,0 +1,119 @@
+// === Кнопки ===
+.getbutton {
+  cursor: pointer;
+  padding: 15px;
+  box-shadow: 3px 10px $shadow;
+  background-color: #273270;
+  border-radius: 5px;
+  border: none;
+  color: $white;
+  width: 100%;
+  max-width: 500px;
+  &:hover {
+    background-color: $white;
+    transition: 0.8s;
+    color: $black;
+    transform: scale(1.03);
+  }
+  &:active{
+    transform: scale(0.99);
+  }
+}
+
+.getbutton2 {
+  @extend .getbutton;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 2px 7px $shadow;
+}
+
+.getbutton3 {
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 3px 10px $shadow;
+  background: none;
+  border-radius: 18px;
+  border: 2px solid rgba(232, 232, 232, 0.5);
+  color: $orange;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  letter-spacing: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  &:hover {
+    color: rgb(255, 255, 255);
+    border: 2px solid #6c6c6c;
+    transform: translateY(-5px);
+    box-shadow: 5px 15px rgba(0, 0, 0, 0.3);
+  &:active {
+    color: rgb(216, 216, 216);
+    border: 2px solid #494949;
+    transform: scale(0.99);
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.6);}
+    &::before {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+    span {
+      transform: scale(0.99);
+    }
+  }
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+  }
+}
+.getbutton4 {
+  cursor: pointer;
+  width: 100%;
+  max-width: 500px;
+  height: 60px;
+  background: none;
+  border-radius: 18px;
+  border: 2px #7b0ba7 solid;
+  color: $orange;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &:hover {
+    border: 2px solid blanchedalmond;
+    transform: translateY(-7px);
+    transition: 0.5s;
+    &::before {
+      width: 300px;
+      height: 300px;
+      opacity: 1;
+    }
+  }
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+  }
+}
+.getbutton5{
+  width: 10%;
+  height: 40px;
+  border-radius: 10px;
+  background: none;
+  border: 1px solid $white;
+  margin: 10px;
+  color: $white;
+}
+.getbutton5:hover{
+  transform: scale(1.05);
+}

@@ -9,6 +9,7 @@ import { UpButton } from '@/shared/ui/buttons/ui/upButton';
 
 import Footer from "@/widgets/Footer";
 import Header from "@/widgets/Header";
+import UserProfile from "@/pages/UserProfile";
 
 
 
@@ -19,12 +20,12 @@ function App() {
       <div className="App min-vh-100">
         <Header />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Gallery" element={<Gallery/>}/>
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>       
-        <UpButton/>
-        <Footer/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Gallery" element={<Gallery />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+
 
       </div>
     </Router>

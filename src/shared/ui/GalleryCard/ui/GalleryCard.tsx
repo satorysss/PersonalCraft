@@ -25,18 +25,19 @@ export default function Gallery() {
 
 function Card({ src, name, likes }: GalleryCardProps) {
     return (
-        <div className="galemain p-3 text-white  ">
+        <div className="Gallery p-3 text-white">
             <img
                 src={src}
                 alt={name}
             />
-            <div className="p-3">
+            <div className="p-2 ">
                 <div className="row m-auto gap-3">
-                    <div className="likes cardItem col">
+                    <div className="likes Gallery-cardItem col ">
                         <span>{likes}</span>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="15"
                             height="15"
+                             className="ms-1"
                             fill="currentColor"
                             viewBox="0 0 16 16"
                         >
@@ -47,7 +48,7 @@ function Card({ src, name, likes }: GalleryCardProps) {
                         </svg>
                     </div>
 
-<<<<<<< HEAD
+                    <div className="name Gallery-cardItem col">
             <div className=" row text-center justify-content-center align-items-center">
                 <div className="row gap-3">
                     <div className="likes cardItem col">
@@ -75,15 +76,13 @@ function Card({ src, name, likes }: GalleryCardProps) {
 
 
         </div>
-=======
-                    <div className="name cardItem col">
                         <span>
                             {name}
                         </span>
                     </div>
                 </div>
 
-                <div className="cardItem m-auto mt-2">
+                <div className="Gallery-cardItem m-auto mt-2">
                     <span>
                         Copy Key
                     </span>
@@ -91,6 +90,5 @@ function Card({ src, name, likes }: GalleryCardProps) {
             </div>
             </div>
 
->>>>>>> 500b59aba808e5072dffb5706356b9e9487864df
     );
 }

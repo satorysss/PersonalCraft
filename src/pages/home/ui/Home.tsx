@@ -5,7 +5,7 @@ import About from "@/widgets/About";
 import NeonAbout from "@/widgets/NeonAbout";
 import Offer from "@/widgets/HomeOffer";
 import HomeLastElement from "@/widgets/HomeLastElement";
-
+uyguygjy
 
 
 function Home() {
